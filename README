@@ -1,0 +1,26 @@
+Thu Jul 18 11:59:36 PDT 2019
+
+This subdirectory ./co2/ is to hold programs and data for an atmospheric carbon dioxide plus gps location system.
+
+The broad purpose being addressed is to collect measurements of atmospheric CO2,combined with the geographic location of the sensor and the time of the measurement. There are two measurement instruments. The CO2 sensor is a Cozir device that produces a digital data output. The position sensor is an Adafruit Ultimate global positioning sensor breakout board. Each sensor is powered by and connected to a ttl data to USB device.  
+
+The measurement software is initially these programs. With some comment about what each program does.
+
+Not covered yet: Need a secure way to provide the email sending program with a username and password without disclosing that data to inappropriate reading.
+
+Not covered in this Git repository: Cron job has an @reboot entry. Which calls a CO2 meter startup script.
+
+
+9co2gpsflatfilewriter.py	# Python program. Identifies which USB device is a GPS or CO2 sensor. Makes a data file name. Makes a data file header line. Reads sensors at 1 minute intervals.
+
+co2readstart.sh	# Shell script in user home directory to launch CO2 meter programs.
+
+README	# This file
+
+sendco2filesfromvona.py	# Script that emails one data file to a fixed email address.
+
+setupemailenvironmentvariables.sh	# Set up environment variables used by the email sending process.
+
+woofy1560647941_co2gps52629	# One sample data file
+
+
